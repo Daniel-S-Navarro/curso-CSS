@@ -218,6 +218,10 @@
             document.getElementById("resultado").value = "";
           }
 
+          if (valor === ".") {
+            document.getElementById("resultado").value += valor;
+          }
+
           if (
             valor === "+" ||
             valor === "-" ||
