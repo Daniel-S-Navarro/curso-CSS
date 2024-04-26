@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html id="jogo" lang="pt-br">
+  <head>
+    <title>Document</title>
+
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="jogo.js"></script>
+  </head>
+  <body onresize="ajustaTamanhoJogo()">
+    <div class="painel">
+      <div class="vida">
+        <img id="v1" src="imagens/coracao_cheio.png" />
+        <img id="v2" src="imagens/coracao_cheio.png" />
+        <img id="v3" src="imagens/coracao_cheio.png" />
+      </div>
+      <div class="cronometro">Tempo restante: <span id="cronom"></span></div>
+    </div>
+    <script>
+      document.getElementById("cronom").innerHTML = tempo;
+      setInterval(() => {
+        posicaoRandomica();
+      }, tempoCronometro);
+    </script>
+  </body>
+</html>
